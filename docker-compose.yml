@@ -1,6 +1,6 @@
 services:
   web:
-    image: nginx:1.28
+    image: nginx:1.14
     ports:
       - "8080:80"
     volumes:
@@ -12,7 +12,7 @@ services:
     command: ["-text=hello from the edge stack", "-listen=:5678"]
     privileged: true
   cache:
-    image: redis:8.0
+    image: redis:4.0
     ports:
       - "6379:6379"
   db:

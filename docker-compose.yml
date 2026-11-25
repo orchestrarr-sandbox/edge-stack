@@ -16,7 +16,7 @@ services:
     ports:
       - "6379:6379"
   db:
-    image: postgres:9.6
+    image: postgres:17
     environment:
       POSTGRES_PASSWORD: changeme
     volumes:

@@ -1,6 +1,6 @@
 services:
   web:
-    image: nginx:1.28
+    image: nginx:1.14
     ports:
       - "8080:80"
     volumes:
@@ -8,7 +8,7 @@ services:
     depends_on:
       - app
   app:
-    image: hashicorp/http-echo:1.0.0
+    image: hashicorp/http-echo:latest
     command: ["-text=hello from the edge stack", "-listen=:5678"]
     privileged: true
   cache:

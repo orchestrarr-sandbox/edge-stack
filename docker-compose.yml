@@ -21,5 +21,11 @@ services:
       POSTGRES_PASSWORD: changeme
     volumes:
       - db-data:/var/lib/postgresql/data
+    networks:
+      - db-internal
+networks:
+  # internal: no host publishing and no outbound access for the database
+  db-internal:
+    internal: true
 volumes:
   db-data:

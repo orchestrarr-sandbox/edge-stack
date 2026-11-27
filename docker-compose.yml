@@ -1,6 +1,6 @@
 services:
   web:
-    image: nginx:1.14
+    image: nginx:1.28
     ports:
       - "8080:80"
     volumes:
